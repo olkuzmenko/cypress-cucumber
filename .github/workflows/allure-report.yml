@@ -1,12 +1,13 @@
-name: generate allure-report
+name: allure-report
 
 on:
   release:
     types:
-      - created  
-    push:
-        branches:
-            - main
+      - created
+  push:
+    branches-ignore:
+      - '!main'
+
 jobs:
   allure:
     name: Generate Allure Report
