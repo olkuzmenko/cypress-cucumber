@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@shelex/cypress-allure-plugin": "^2.32.1",
+    "cypress": "^10.9.0",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.15.10"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+  }
+}
