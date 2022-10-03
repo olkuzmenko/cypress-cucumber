@@ -14,5 +14,11 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
-  }
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "types": ["@shelex/cypress-allure-plugin"],
+    "noEmit": true
+}
 }
