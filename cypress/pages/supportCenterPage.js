@@ -1,33 +1,48 @@
 class SupportCenterPage{
-elements ={
-    clearTextIcon: () => cy.get('.interface-icon'),
-    searchInput: () => cy.get('input[type="text"]'),
-    searchResult: () => cy.get('div .section__content'),
-    searchIcon: () => cy.get('.search__submit'),
-    headline: () => cy.get('.header__headline'),
-    linkedinIcon: () => cy.get('.footer__link__linkedin a'),
-    facebookIcon: () => cy.get('.footer__link__facebook a'),
-    twitterIcon: () => cy.get('.footer__link__twitter a')
+
+get clearTextIcon() {
+    return cy.get('.interface-icon')
+}
+get searchInput() {
+    return cy.get('input[type="text"]')
+}
+get searchResult() {
+    return cy.get('div .section__content')
+}
+get searchIcon() {
+    return cy.get('.search__submit')
+}
+get headline() {
+    return cy.get('.header__headline')
+}
+get linkedinIcon() {
+    return cy.get('.footer__link__linkedin a')
+}
+get facebookIcon() {
+    return cy.get('.footer__link__facebook a')
+}
+get twitterIcon() {
+    return cy.get('.footer__link__twitter a')
 }
 enterRequest(request){
-    this.elements.searchInput().type(request).type('{enter}')
+    this.searchInput.type(request).type('{enter}')
 }
 enterRequestClickSearchIcon(request){
-    this.elements.searchInput().type(request)
-    this.elements.headline().click()
-    this.elements.searchIcon().click()   
+    this.searchInput.type(request)
+    this.headline.click()
+    this.searchIcon.click()   
 }
 clearTextIconClick(){
-    this.elements.clearTextIcon().click()
+    this.clearTextIcon.click()
 }
 linkedinFocus(){
-    this.elements.linkedinIcon().focus()
+    this.linkedinIcon.focus()
 }
 facebookFocus(){
-    this.elements.facebookIcon().focus()
+    this.facebookIcon.focus()
 }
 twitterFocus(){
-    this.elements.twitterIcon().focus()
+    this.twitterIcon.focus()
 }
 }
 module.exports = new SupportCenterPage()

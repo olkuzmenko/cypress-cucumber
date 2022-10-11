@@ -22,9 +22,15 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  viewportWidth: 1280,
-  viewportHeight: 720,
   env:{
-    allureReuseAfterSpec: true
-  }  
+    allureReuseAfterSpec: true,
+  },
+  video: true,
+  defaultCommandTimeout: 5000,
+  responseTimeout: 20000,
+  retries: {"runMode": 2, "openMode": 3},
+  requestTimeout: 5000,
+  screenshotOnRunFailure: true,
+  trashAssetsBeforeRuns: true,
+  video: false
 });

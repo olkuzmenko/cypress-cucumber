@@ -1,84 +1,126 @@
 class LoginPage{
-    elements ={
-        emailInput : () => cy.get('div[name="login"] input[name="email"]'),
-        passwordInput : () => cy.get('input[name="password"]'),
-        loginButton : () => cy.get('button[class*="LoginForm"]'),
-        signinTitle : () => cy.get('div[data-testid="login.signin.title"]'),
-        phoneNumberInput : () => cy.get('input[class*="PhoneNumberField"]'),
-        sendCodeButton : () => cy.get('button[type="submit"]'),
-        successMessage : () => cy.get('div[type="success"]'),
-        errorMessage : () => cy.get('div[type="error"]'),
-        forgetPasswordhyperlink : () => cy.get('a[href="/#/login/password-reset"]'),
-        resetPasswordEmail: () => cy.get('input[name="email"]'),
-        submitButton: () => cy.get('button[type="submit"]'),
-        resetText: () => cy.get('div[class*="PasswordReset__MessageCopy"]'),
-        singleSignOn: () => cy.get('button[name="sso"]'),
-        companyEmail: () => cy.get('div[name="sso"] input[name="email"]'),
-        companyNameButton: () => cy.get('button[class*="SSOForm__ButtonLink"]'),
-        continueButton: () => cy.get('button[class*="SSOForm__LoginButton"]'),
-        businessNameInput: () => cy.get('input[name="short_name"]'),
-        resendButton: () => cy.get('a[href="/#/login/resend-email"]'),
-        resendEmailMessage: () => cy.get('div[class*="ResendEmail__MessageCopy"]'),
-        resendEmailInput: () => cy.get('input[name="email"]'),
-        RequiredCompanyMessage: () => cy.get('div[name="sso"] div[class*="TextField__ErrorMessage"]'),
-        closeCookiesButton : () => cy.get('button[aria-label="close and deny"]')
+    get emailInput() {
+        return cy.get('div[name="login"] input[name="email"]')
     }
+    get passwordInput() {
+        return cy.get('input[name="password"]')
+    }
+    get loginButton() {
+        return cy.get('button[class*="LoginForm"]')
+    }
+    get signinTitle() {
+        return cy.get('div[data-testid="login.signin.title"]')
+    }
+    get phoneNumberInput() {
+        return cy.get('input[class*="PhoneNumberField"]')
+    }
+    get sendCodeButton() {
+        return cy.get('button[type="submit"]')
+    }
+    get successMessage() {
+        return cy.get('div[type="success"]')
+    }
+    get errorMessage() {
+        return cy.get('div[type="error"]')
+    }
+    get forgetPasswordhyperlink () {
+        return cy.get('a[href="/#/login/password-reset"]')
+    }
+    get resetPasswordEmail() {
+        return cy.get('input[name="email"]')
+    }
+    get submitButton() {
+        return cy.get('button[type="submit"]')
+    }
+    get resetText() {
+        return cy.get('div[class*="PasswordReset__MessageCopy"]')
+    }
+    get singleSignOn() {
+        return cy.get('button[name="sso"]')
+    }
+    get companyEmail() {
+        return cy.get('div[name="sso"] input[name="email"]')
+    }
+    get companyNameButton() {
+        return cy.get('button[class*="SSOForm__ButtonLink"]')
+    }
+    get continueButton() {
+        return cy.get('button[class*="SSOForm__LoginButton"]')
+    }
+    get businessNameInput() {
+        return cy.get('input[name="short_name"]')
+    }
+    get resendButton() {
+        return cy.get('a[href="/#/login/resend-email"]')
+    }
+    get resendEmailMessage() {
+        return cy.get('div[class*="ResendEmail__MessageCopy"]')
+    }
+    get resendEmailInput() {
+        return cy.get('input[name="email"]')
+    }
+    get RequiredCompanyMessage() {
+        return cy.get('div[name="sso"] div[class*="TextField__ErrorMessage"]')
+    }
+    get closeCookiesButton () {
+        return cy.get('button[aria-label="close and deny"]')
+    }   
     closeCookies(){
-        this.elements.closeCookiesButton().click()
+        this.closeCookiesButton().click()
     }
     openLoginPage(page){
         cy.visit(page)
     }
     enterAuthorizeEmail(email){
-        this.elements.emailInput().type(email)
+        this.emailInput.type(email)
     }
     enterPassword(password){
-        this.elements.passwordInput().type(password)
+        this.passwordInput.type(password)
     }
     clickLogin(){
-        this.elements.loginButton().click();   
+        this.loginButton.click();   
     }
     enterPhone(phoneNumber){
-        this.elements.phoneNumberInput().type(phoneNumber);
+        this.phoneNumberInput.type(phoneNumber);
     }
     clickSendCode(){
-        this.elements.sendCodeButton().click();
+        this.sendCodeButton.click();
     }
     clickForgetPassword(){
-        this.elements.forgetPasswordhyperlink().click()
+        this.forgetPasswordhyperlink.click()
     }
     resetPasswordTypeEmail(email){
-        this.elements.resetPasswordEmail().type(email)
+        this.resetPasswordEmail.type(email)
     }
     clickSubmitButton(){
-        this.elements.submitButton().click()
+        this.submitButton.click()
     }
     clickSingleSignOn(){
-        this.elements.singleSignOn().click()
+        this.singleSignOn.click()
     }
     enterCompanyEmail(email){
-        this.elements.companyEmail().type(email)
+        this.companyEmail.type(email)
     }
     clickCompanyNameButton(){
-        this.elements.companyNameButton().click()
+        this.companyNameButton.click()
     }
     clickContinueButton(){
-        this.elements.continueButton().click()
+        this.continueButton.click()
     }
     enterBusinessName(businessName){
-        this.elements.businessNameInput().type(businessName)
+        this.businessNameInput.type(businessName)
     }
     clickResendButton(){
-        this.elements.resendButton().click()
+        this.resendButton.click()
     }
     enterEmailForResend(email){
-        this.elements.resendEmailInput().type(email)
+        this.resendEmailInput.type(email)
     }
     clickCompanyEmailInput(){
-        this.elements.companyEmail().click()
+        this.companyEmail.click()
     }
     clickCompanyNameInput(){
-        this.elements.businessNameInput().click()
+        this.businessNameInput.click()
     }
     }
     module.exports = new LoginPage();
