@@ -1,5 +1,6 @@
 {
   "scripts": {
+<<<<<<< HEAD
     "cy:open": "npx cypress open --env allure=true --config specPattern=cypress/features/** --browser chrome",
     "cy:cucumber:open": "npx cypress open --env allure=true --config specPattern=cypress/features/*.feature,excludeSpecPattern=*.js --browser chrome",
     "cy:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/features/* --env allure=true --browser chrome",
@@ -9,6 +10,17 @@
     "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true",
     "cy:exampleconfig": "cypress run --config-file example.config.js"
   },
+=======
+        "cy:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/features/** --browser chrome",
+        "cy:cucumber:open": "npx cypress open --env allure=true --config specPattern=cypress/e2e/features/*.feature,excludeSpecPattern=*.js --browser chrome",
+        "cy:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/features/* --env allure=true --browser chrome",
+        "cy:cucumber:run": "DEBUG=allure-plugin* npx cypress run --config specPattern=cypress/e2e/features/*.feature,excludeSpecPattern=*.js --env allure=true --browser chrome",
+        "allure:report": "allure generate allure-results --clean -o allure-report",
+        "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+        "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+  
+   },
+>>>>>>> 52e77cacfaa7022c15e121a761b8a1c880a89287
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "@shelex/cypress-allure-plugin": "^2.32.1",

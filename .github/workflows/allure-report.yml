@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: generate-allure-report
+=======
+name: allure-report-new
+>>>>>>> 52e77cacfaa7022c15e121a761b8a1c880a89287
 'on':
     push:
         branches:
@@ -63,4 +67,8 @@ jobs:
               with:
                   github_token: ${{ secrets.ALLURE_TOKEN }}
                   publish_branch: gh-pages
+<<<<<<< HEAD
                   publish_dir: allure-history
+=======
+                  publish_dir: allure-history
+>>>>>>> 52e77cacfaa7022c15e121a761b8a1c880a89287
