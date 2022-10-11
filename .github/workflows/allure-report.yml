@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 name: generate-allure-report
-=======
-name: allure-report-new
->>>>>>> 52e77cacfaa7022c15e121a761b8a1c880a89287
 'on':
     push:
         branches:
