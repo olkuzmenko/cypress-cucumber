@@ -28,3 +28,4 @@ For using another configuration file:
 <a href="https://ibb.co/0sTT2pn"><img src="https://i.ibb.co/xFWWLK2/allure-report.png" alt="allure-report" width="300"></a>
 
 Allure report is located at [github pages](https://olkuzmenko.github.io/cypress-cucumber/)
+
