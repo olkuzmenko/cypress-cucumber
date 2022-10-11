@@ -2,7 +2,7 @@ name: allure-report-new
 'on':
     push:
         branches:
-            - cypress-cucumber-new
+            - main
 jobs:
     generate-report:
         runs-on: ubuntu-latest
